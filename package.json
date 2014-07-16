@@ -1,0 +1,14 @@
+{
+  "name": "blocktooth",
+  "version": "0.0.1",
+  "description": "Bloqueo automatico cuando el celular se eleja",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stalin Bonilla",
+  "license": "ISC",
+  "dependencies": {
+    "bluetooth-serial-port": "^1.1.4"
+  }
+}
