@@ -10,11 +10,14 @@ btSerial.on('found', function (address, name) {
     }
 });
 btSerial.on('finished', function () {
-    if (isFound && isLock) {
-        exec('gnome-screensaver-command -d', function (error, stdout, stderr) {
-            console.log('unlocking...');
-            isLock = false;
-        });
+    if (isFound) {
+        if (isLock) {
+
+            exec('gnome-screensaver-command -d', function (error, stdout, stderr) {
+                console.log('unlocking...');
+                isLock = false;
+            });
+        }
     } else {
         exec('gnome-screensaver-command -l', function (error, stdout, stderr) {
             console.log('blocking...');
